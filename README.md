@@ -8,7 +8,7 @@ mtl_file_path = "your path"
 save_folder = "your save folder"
 ```
 
-now you can read all kinds of bands
+#### Now you can read all kinds of bands as following:
 
 ```Python
 
@@ -20,7 +20,7 @@ thermal_image, thermal_projection, thermal_geotransform = tool.read_thermal_band
 
 ```
 
-and you can do radiometric calibration
+#### Radiometric calibration
 
 ```Python
 
@@ -28,7 +28,8 @@ tool.radiometric_calibration(mtl_file_path, save_folder, cali_type = 'radiance')
 
 ```
 
-you can cut a image to tiles for some deep learning applications
+#### Cut a image to tiles for deep learning applications
++ notice that the geo-information is solved.
 ```Python
 
 tool.cut_to_tile_with_geoinfo(save_folder, (256, 256, 1), pan, pan_projection, pan_geotransform)
